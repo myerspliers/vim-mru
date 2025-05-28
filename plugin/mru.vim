@@ -107,7 +107,7 @@
 "
 "       let MRU_File = 'd:\myhome\_vim_mru_files'
 "
-let MRU_FavFile = $HOME . '\vimfiles\fav.list'
+let MRU_FavFile = $HOME . '\.vim\fav.list'
 "
 " By default, the plugin will remember the names of the last 10 used files.
 " As you edit more files, old file names will be removed from the MRU list.
@@ -194,11 +194,7 @@ if !exists('MRU_Auto_Close')
 endif
 
 if !exists('MRU_File')
-    if has('unix')
-        let MRU_File = $HOME . "/.vim_mru_files"
-    else
-        let MRU_File = $HOME . "/vimfiles/_vim_mru_files"
-    endif
+    let MRU_File = $HOME . "/.vim_mru_files"
 endif
 
 " Option for enabling or disabling the MRU menu
